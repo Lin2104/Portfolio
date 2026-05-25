@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Lin Htet Ko Lay</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--text);
+            line-height: 1.3;
+            margin: 0;
+            padding: 0;
+            background: #f3f4f6;
+        }
+        .container {
+            max-width: 210mm; /* A4 Width */
+            min-height: 297mm; /* A4 Height */
+            margin: 10px auto;
+            padding: 15mm;
+            background: var(--bg);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .profile-img-cv {
+            width: 105px;
+            height: 105px;
+            border-radius: 10px; /* Square with slight rounding */
+            object-fit: cover;
+            border: 2px solid var(--primary);
+        }
+        .header-content { flex-grow: 1; }
+        h1 { margin: 0; color: var(--primary); font-size: 22px; letter-spacing: 1px; }
+        .header-content p { margin: 2px 0; font-weight: 600; color: var(--text-light); font-size: 14px; }
+        .contact-info { text-align: right; font-size: 12px; color: var(--text-light); }
+        
+        section { margin-bottom: 8px; }
+        h2 { 
+            font-size: 16px; 
+            text-transform: uppercase; 
+            border-bottom: 1px solid #e5e7eb; 
+            padding-bottom: 2px; 
+            margin-bottom: 6px; 
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+        
+        .grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 8px; }
+        .item { margin-bottom: 2px; }
+        .item strong { display: block; font-size: 12px; color: var(--text); }
+        .item span { font-size: 11px; color: var(--text-light); }
+
+        .education-item, .project-item { margin-bottom: 10px; }
+        .education-item h3, .project-item h3 { margin: 0; font-size: 14px; font-weight: 700; }
+        .date { font-size: 12px; color: var(--text-light); font-style: italic; }
+        p { margin: 2px 0; font-size: 13px; }
+        ul { margin: 2px 0; padding-left: 15px; font-size: 13px; }
+        li { margin-bottom: 1px; }
+
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            z-index: 1000;
+        }
+
+        @media print {
+            .print-btn { display: none; }
+            body { padding: 0; margin: 0; background: white; }
+            .container { 
+                margin: 0; 
+                box-shadow: none; 
+                width: 210mm; 
+                height: 297mm;
+                padding: 10mm 15mm;
+                overflow: hidden;
+            }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">Download PDF</button>
+    
+    <div class="container">
+        <header>
+            <img src="profile.jpg" alt="Lin Htet Ko Lay" class="profile-img-cv">
+            <div class="header-content">
+                <h1>LIN HTET KO LAY</h1>
+                <p>IT Support & Cyber Security Analyst</p>
+            </div>
+            <div class="contact-info">
+                <div>linhtet.1102003.kolay@gmail.com</div>
+                <div>09689416822</div>
+                <div>Kyeemyindaing, Myanmar</div>
+                <div style="font-size: 10px; margin-top: 2px;">github.com/Lin2104 | linkedin.com/in/lin-ko-56a5ab3a7</div>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p style="color: var(--text-light);">
+                I am a 5th-year Information Science student at the University of Technology (Yatanarpon Cyber City). 
+                My expertise lies in bridging the gap between technical troubleshooting and proactive digital defense. 
+                I am passionate about creating secure, efficient, and user-friendly digital solutions.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="grid">
+                <div class="item"><strong>EDR/XDR/MDR</strong><span>Intermediate</span></div>
+                <div class="item"><strong>IT Support (A+)</strong><span>Experienced</span></div>
+                <div class="item"><strong>Network Security</strong><span>Experienced</span></div>
+                <div class="item"><strong>SOC Analyst</strong><span>Beginner</span></div>
+                <div class="item"><strong>Azure Security</strong><span>Beginner</span></div>
+                <div class="item"><strong>JavaScript / React</strong><span>Intermediate</span></div>
+                <div class="item"><strong>Node.js / SQL</strong><span>Intermediate</span></div>
+                <div class="item"><strong>PHP / HTML / CSS</strong><span>Intermediate</span></div>
+            </div>
+        </section>
+
+        <section style="display: flex; gap: 40px;">
+            <div style="flex: 1;">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>UTYCC</h3>
+                    <div class="date">5th Year | Information Science</div>
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <h2>Certifications</h2>
+                <ul style="margin: 0; padding-left: 20px;">
+                    <li>LIMA CHARLIE EDR/XDR/MDR</li>
+                    <li>Introduction to Cybersecurity (Cisco)</li>
+                    <li>Certificate of Merit – AI Ready ASEAN Youth Challenge (Top 10 in Country)</li>
+                    <li>Cisco Networking Basics</li>
+                    <li>MS Azure Fundamentals (AZ-900)</li>
+                    <li>SOC Analyst</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Key Projects</h2>
+            <div class="project-item">
+                <h3>Blasky Game Shop (Backend & AI Developer)</h3>
+                <p>Digital commerce platform for game top-ups. Features dual-bot Telegram system, automated Plati/SmileOne integrations, and Gemini 2.0 AI agent.</p>
+            </div>
+            <div class="project-item">
+                <h3>Scan Shield AI (AI Forensic Engineer - AI Ready ASEAN Participant)</h3>
+                <p>Cross-border AI forensic engine for real-time phishing mitigation. Uses Gemma 2B & Llama 3 to block malicious SMS, URLs, and QR codes locally. (Watch Demo: <a href="https://www.youtube.com/watch?v=zCKZ9ComQH8" target="_blank" style="color: var(--primary); text-decoration: none;">https://www.youtube.com/watch?v=zCKZ9ComQH8</a>)</p>
+            </div>
+            <div class="project-item">
+                <h3>Hostel & Restaurant Platform (Group Leader - 1st Place)</h3>
+                <p>Hospitality website with a focus on secure user data management and system reliability.</p>
+            </div>
+            <div class="project-item">
+                <h3>QR-Based Restaurant Management (Group Leader - 2nd Place)</h3>
+                <p>Secure full-stack ecosystem featuring automated ordering and encrypted admin dashboard.</p>
+            </div>
+            <div class="project-item">
+                <h3>IT Services & Solutions (Founder / Technician)</h3>
+                <p>Providing secure hardware maintenance, system troubleshooting, and digital defense services.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Auto-trigger print if needed or just leave the button
+    </script>
+</body>
+</html>

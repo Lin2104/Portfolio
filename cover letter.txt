@@ -1,0 +1,35 @@
+Lin Htet Ko Lay
+Kyeemyindaing, Yangon, Myanmar
+09689416822
+linhtet.1102003.kolay@gmail.com
+May 6, 2026
+
+Hiring Manager
+Access Spectrum Company Limited
+Mingala Taungnyunt, Yangon Region, Myanmar
+
+RE: Application for Junior Security Analyst Position
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the Junior Security Analyst position at Access Spectrum Company Limited, as advertised. As a 5th-year Information Science student at the University of Technology Yatanarpone Cyber City (UTYCC), I am eager to apply my foundational knowledge of networking and system security to a professional environment that values growth and technical excellence.
+
+My background in IT Support has provided me with a solid understanding of hardware, software, and networking protocols (TCP/IP, DNS, DHCP), which I believe is essential for a career in cybersecurity. I am particularly drawn to this role because it bridges the gap between technical troubleshooting and proactive security operations—two areas I am deeply passionate about.
+
+Key highlights of my qualifications include:
+- Foundational Knowledge: Strong understanding of Windows and Linux OS security and core networking principles.
+- Hands-on Exposure: Familiarity with essential security tools such as Wireshark and Nmap through my university coursework and personal projects.
+- Certifications: I have successfully completed the Microsoft Azure Fundamentals (AZ-900) and Security Operations Center (SOC) Analyst certifications, demonstrating my commitment to learning the industry's best practices.
+- Academic Excellence: My experience as a group leader in technical projects has honed my problem-solving skills and my ability to work effectively within a team to meet deadlines.
+
+I am a quick learner and a dedicated student who is ready to take the next step in my career. I am particularly impressed by Access Spectrum’s reputation in the Myanmar technology sector and would welcome the opportunity to contribute to your security team while learning from your experienced engineers.
+
+Thank you for your time and for considering my application. I have attached my CV for your review and look forward to the possibility of discussing how my skills and enthusiasm align with the needs of Access Spectrum.
+
+Sincerely,
+
+Lin Htet Ko Lay
+
+add typing cursor motion to this text "IT Support Specialist
+& Cyber Security Analyst"
+make it starting from "IT" and end at "Analyst" and add repeat animation
