@@ -6,6 +6,7 @@ import edrCert from './assets/Edr.jpg';
 import ciscoCert from './assets/Networking.jpg';
 import aiReadyCert from './assets/AI Ready.png';
 import introCyberCert from './assets/cc.jpg';
+import itSupportCert from './assets/IT_Support.jpg';
 
 function App() {
   const [displayText1, setDisplayText1] = React.useState("");
@@ -97,6 +98,7 @@ function App() {
       icon: "fa-solid fa-robot"
     },
     { title: "Introduction to Cybersecurity", image: introCyberCert, icon: "fa-solid fa-shield-halved" },
+    { title: "Google IT Support Professional Certificate", image: itSupportCert, icon: "fa-solid fa-screwdriver-wrench" },
     { title: "Microsoft Azure Fundamentals", image: azureCert, icon: "fa-brands fa-microsoft" },
     { title: "SOC Analyst", image: socCert, icon: "fa-solid fa-user-shield" }
   ];

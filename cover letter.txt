@@ -30,6 +30,3 @@ Sincerely,
 
 Lin Htet Ko Lay
 
-add typing cursor motion to this text "IT Support Specialist
-& Cyber Security Analyst"
-make it starting from "IT" and end at "Analyst" and add repeat animation
