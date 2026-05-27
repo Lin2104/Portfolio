@@ -98,7 +98,7 @@ function App() {
       icon: "fa-solid fa-robot"
     },
     { title: "Introduction to Cybersecurity", image: introCyberCert, icon: "fa-solid fa-shield-halved" },
-    { title: "Google IT Support Professional Certificate", image: itSupportCert, icon: "fa-solid fa-screwdriver-wrench" },
+    { title: "Cisco IT Support Specialist Certificate", image: itSupportCert, icon: "fa-solid fa-screwdriver-wrench" },
     { title: "Microsoft Azure Fundamentals", image: azureCert, icon: "fa-brands fa-microsoft" },
     { title: "SOC Analyst", image: socCert, icon: "fa-solid fa-user-shield" }
   ];
