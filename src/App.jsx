@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import profileImg from './assets/pro.jpg'; // Use pro.jpg for portfolio
+import profileImg from './assets/pro.png'; // Use pro.jpg for portfolio
 import azureCert from './assets/Azure.jpg';
 import socCert from './assets/SOC.jpg';
 import edrCert from './assets/Edr.jpg';
@@ -7,12 +7,23 @@ import ciscoCert from './assets/Networking.jpg';
 import aiReadyCert from './assets/AI Ready.png';
 import introCyberCert from './assets/cc.jpg';
 import itSupportCert from './assets/IT_Support.jpg';
+import googleCyberMain from './assets/Cyber Security/Coursera 88X0AWAOS4O5.jpg';
+import googleCyberCourse1 from './assets/Cyber Security/Coursera HHISNCXO5W9X.jpg';
+import googleCyberCourse2 from './assets/Cyber Security/Coursera FNQNA7B6T4PU.jpg';
+import googleCyberCourse3 from './assets/Cyber Security/Coursera WG44WM8VLYK5.jpg';
+import googleCyberCourse4 from './assets/Cyber Security/Coursera R6N2X63P5E1C.jpg';
+import googleCyberCourse5 from './assets/Cyber Security/Coursera X1U98RAOH5OC.jpg';
+import googleCyberCourse6 from './assets/Cyber Security/Coursera BS09CXOR9YRC.jpg';
+import googleCyberCourse7 from './assets/Cyber Security/Coursera KZ1NRX4DUBNV.jpg';
+import googleCyberCourse8 from './assets/Cyber Security/Coursera LA8MEZQLK72I.jpg';
+import googleCyberCourse9 from './assets/Cyber Security/Coursera ZFZDTQB59FFW.jpg';
 
 function App() {
   const [displayText1, setDisplayText1] = React.useState("");
   const [displayText2, setDisplayText2] = React.useState("");
   const [isTypingFirst, setIsTypingFirst] = React.useState(true);
   const [selectedCert, setSelectedCert] = React.useState(null);
+  const [activeSubCertIndex, setActiveSubCertIndex] = React.useState(0);
 
   const line1 = "IT Support";
   const line2 = "& Cyber Security Analyst Position";
@@ -85,7 +96,27 @@ function App() {
     { name: "IT Support (A+)", level: "Experienced", icon: "fa-solid fa-screwdriver-wrench", color: "#FFA500" }
   ];
 
+  const googleCyberSubCertificates = [
+    { title: "Google Cybersecurity Professional Certificate (9 Courses)", shortLabel: "Professional Certificate", image: googleCyberMain },
+    { title: "Course 1: Foundations of Cybersecurity", shortLabel: "1. Foundations", image: googleCyberCourse1 },
+    { title: "Course 2: Play It Safe: Manage Security Risks", shortLabel: "2. Security Risks", image: googleCyberCourse2 },
+    { title: "Course 3: Connect and Protect: Networks and Network Security", shortLabel: "3. Network Security", image: googleCyberCourse3 },
+    { title: "Course 4: Tools of the Trade: Linux and SQL", shortLabel: "4. Linux & SQL", image: googleCyberCourse4 },
+    { title: "Course 5: Assets, Threats, and Vulnerabilities", shortLabel: "5. Assets & Threats", image: googleCyberCourse5 },
+    { title: "Course 6: Sound the Alarm: Detection and Response", shortLabel: "6. Detection & Response", image: googleCyberCourse6 },
+    { title: "Course 7: Automate Cybersecurity Tasks with Python", shortLabel: "7. Python Automation", image: googleCyberCourse7 },
+    { title: "Course 8: Put It to Work: Prepare for Cybersecurity Jobs", shortLabel: "8. Career Prep", image: googleCyberCourse8 },
+    { title: "Course 9: Accelerate Your Job Search with AI", shortLabel: "9. Job Search with AI", image: googleCyberCourse9 }
+  ];
+
   const certifications = [
+    {
+      title: "Google Cybersecurity Professional Certificate",
+      image: googleCyberMain,
+      icon: "fa-brands fa-google",
+      badge: "9 Courses Included",
+      subCertificates: googleCyberSubCertificates
+    },
     { 
       title: "LIMA CHARLIE EDR/XDR/MDR", 
       image: edrCert, 
@@ -264,12 +295,16 @@ function App() {
               <div 
                 key={i} 
                 className="cert-full-card reveal clickable"
-                onClick={() => setSelectedCert(cert)}
+                onClick={() => {
+                  setSelectedCert(cert);
+                  setActiveSubCertIndex(0);
+                }}
               >
                 <div className="cert-img-full-wrapper">
                   <img src={cert.image} alt={cert.title} />
+                  {cert.badge && <span className="cert-bundle-badge">{cert.badge}</span>}
                   <div className="cert-overlay">
-                    <span>Click to View</span>
+                    <span>{cert.subCertificates ? "View All 10 Certificates" : "Click to View"}</span>
                   </div>
                 </div>
                 <div className="cert-full-info">
@@ -381,9 +416,38 @@ function App() {
         <div className="cert-modal" onClick={() => setSelectedCert(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setSelectedCert(null)}>×</button>
-            <img src={selectedCert.image} alt={selectedCert.title} className="modal-img" />
+            <img
+              src={
+                selectedCert.subCertificates
+                  ? selectedCert.subCertificates[activeSubCertIndex].image
+                  : selectedCert.image
+              }
+              alt={
+                selectedCert.subCertificates
+                  ? selectedCert.subCertificates[activeSubCertIndex].title
+                  : selectedCert.title
+              }
+              className={`modal-img ${selectedCert.subCertificates ? 'modal-img-with-gallery' : ''}`}
+            />
             <div className="modal-caption">
-              <h3>{selectedCert.title}</h3>
+              <h3>
+                {selectedCert.subCertificates
+                  ? selectedCert.subCertificates[activeSubCertIndex].title
+                  : selectedCert.title}
+              </h3>
+              {selectedCert.subCertificates && (
+                <div className="sub-cert-selector">
+                  {selectedCert.subCertificates.map((sub, idx) => (
+                    <button
+                      key={idx}
+                      className={`sub-cert-pill ${idx === activeSubCertIndex ? 'active' : ''}`}
+                      onClick={() => setActiveSubCertIndex(idx)}
+                    >
+                      {sub.shortLabel}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>

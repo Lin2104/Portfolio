@@ -689,6 +689,60 @@ section {
   font-weight: 700;
 }
 
+.cert-bundle-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(45deg, var(--accent), var(--secondary));
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.modal-img-with-gallery {
+  max-height: 68vh;
+}
+
+.sub-cert-selector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  max-width: 900px;
+}
+
+.sub-cert-pill {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-dim);
+  border: 1px solid var(--glass-border);
+  padding: 0.45rem 0.9rem;
+  border-radius: 50px;
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.sub-cert-pill:hover {
+  color: #fff;
+  border-color: var(--accent);
+  background: rgba(99, 102, 241, 0.2);
+}
+
+.sub-cert-pill.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
